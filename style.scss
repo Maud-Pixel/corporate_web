@@ -1,0 +1,206 @@
+*{
+    margin:0px;
+    box-sizing: 0px;
+}
+@font-face
+{
+    font-family: "Lato";
+    src: url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+}
+$primary: white;
+$secondary: #804000;  
+html {
+    font-size: 62.5%; 
+}
+.container
+{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    font-family: "Lato";
+    &_expression
+    {
+        display: none;
+        margin-left: 2rem;
+        .expression
+        {
+            font-size: 70px;
+            font-weight: $primary;
+            color: $primary;
+            
+        }
+    }
+}
+
+.container_logo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:auto;
+    position: absolute;
+    z-index: 1;
+    background-color:$secondary;  
+    width: 100%;
+    height: 100vh;
+    .logo_position
+    {
+        color: $primary;
+        font-size: 25px;
+        font-family:"Lato";
+        display:flex;
+        flex-direction:row;  
+        margin-left: 30%; 
+        margin-top: 50vh;
+        width: 5rem;
+    }
+    
+    &_nav
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.menu{
+    &_nav
+    {
+        
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 2rem;
+        margin-top: 3rem;
+        display: none;
+    }
+
+    &_element
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 2rem;
+        font-size: 20px;
+       a
+       {
+           margin-left: 1.5rem;
+          
+           color: $primary;
+           &:hover
+           {
+            line-height: 1rem;
+            box-shadow: white 1px 5px;
+           }
+       }
+    }
+    &_button
+    {
+        color: $primary;
+        background-color: #b28c66;
+        padding: 1rem;
+        border: 1px solid $primary;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        box-shadow: 0.7rem 0.7rem 0.5rem #4c2600 ;
+        transition: transform 400ms;
+        &:focus {
+            outline:0;
+            animation-name: rebound;
+            animation-duration: 500ms;
+            
+        }
+        @keyframes rebound
+        {
+            0%{transform: scale(1);
+                box-shadow: 0.7rem 0.7rem 0.5rem #4c2600 }
+            50%{transform:scale(0.8);
+                box-shadow: 0.3rem 0.3rem 0.3rem #4c2600 ;}
+            100%{transform: scale(1);
+                box-shadow: 0.7rem 0.7rem 0.5rem #4c2600 }
+        }
+        
+    }
+    &_burger
+    {
+        display:none;
+    }
+}
+
+
+.img_logo
+{
+    width: 15rem;
+    height: 15rem;
+    margin-right: 5px; 
+    z-index:3;
+   
+}
+.title
+{
+    margin-top: 4rem;
+    position: absolute;
+    margin-left: 1rem;
+    z-index: 2;
+}
+video
+{
+    
+    width: 100%;
+    height: 100%;   
+    z-index: 0;
+}
+.video
+{
+    position: relative;
+    &_comment
+    {
+        position: absolute;
+        top:0;
+        left: 2rem;
+    }
+    &_expression
+    {
+        color: $secondary;
+        font-size: 70px;
+        font-weight: bold;
+        margin-top: -10rem;
+        display: none;
+        overflow: hidden;
+    }
+    &_lorem
+    {
+        color: $secondary;
+        font-size: 20px;
+        margin-top: 20rem;
+        width: 40rem;
+        display: none;
+        overflow-wrap: break-word;
+        
+    }
+    .fa-play
+    {
+        border: 1px solid #b28c66;
+        background-color: #b28c66;
+        color: $primary;
+        font-size: 20px;
+        width: 2rem;
+        padding-left: 0.5rem;
+       
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .menu_burger
+    {
+        display: block;
+        margin-left: 1rem;
+        color: $primary;
+        
+    }
+    .menu_element
+    {
+        display:none;
+    }
+}
