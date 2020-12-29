@@ -1,6 +1,7 @@
 *{
     margin:0px;
     box-sizing: 0px;
+    padding: 0px;
 }
 @font-face
 {
@@ -12,19 +13,24 @@ $secondary: #804000;
 html {
     font-size: 62.5%; 
 }
+.body
+{
+    color: $primary;
+}
 .container
 {
     position: relative;
     width: 100vw;
     height: 100%;
     font-family: "Lato";
+    
     &_expression
     {
         display: none;
         margin-left: 2rem;
         .expression
         {
-            font-size: 70px;
+            font-size: 7rem;
             font-weight: $primary;
             color: $primary;
             
@@ -80,7 +86,7 @@ html {
         flex-direction: row;
         flex-wrap: wrap;
         margin-right: 2rem;
-        font-size: 20px;
+        font-size: 2rem;
        a
        {
            margin-left: 1.5rem;
@@ -98,10 +104,11 @@ html {
         color: $primary;
         background-color: #b28c66;
         padding: 1rem;
+        height: 4rem;
         border: 1px solid $primary;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 20px;
-        font-size: 20px;
+        font-size: 1.5rem;
         text-decoration: none;
         box-shadow: 0.7rem 0.7rem 0.5rem #4c2600 ;
         transition: transform 400ms;
@@ -140,20 +147,21 @@ html {
 .title
 {
     margin-top: 4rem;
-    position: absolute;
-    margin-left: 1rem;
+    margin-left: -9rem;
     z-index: 2;
 }
 video
 {
     
     width: 100%;
-    height: 100%;   
+    height: 100%; 
     z-index: 0;
+    
 }
 .video
 {
     position: relative;
+    
     &_comment
     {
         position: absolute;
@@ -163,33 +171,52 @@ video
     &_expression
     {
         color: $secondary;
-        font-size: 70px;
+        font-size: 7rem;
         font-weight: bold;
-        margin-top: -10rem;
+        margin-top: -11rem;
         display: none;
         overflow: hidden;
     }
     &_lorem
     {
         color: $secondary;
-        font-size: 20px;
-        margin-top: 20rem;
-        width: 40rem;
+        font-size: 2rem;
+        margin-top: 23rem;
+        width: 30rem;
         display: none;
         overflow-wrap: break-word;
-        
     }
     .fa-play
     {
         border: 1px solid #b28c66;
         background-color: #b28c66;
         color: $primary;
-        font-size: 20px;
+        font-size: 2rem;
         width: 2rem;
-        padding-left: 0.5rem;
-       
+        padding-left: 0.5rem; 
+    }
+    .button_play
+    {
+        margin-left: 80vw;
     }
 }
+
+.button_consultation
+{
+    //display: none;
+    color: $primary;
+    background-color: #b28c66;
+    padding: 1rem;
+    border: 1px solid $primary;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0.7rem 0.7rem 0.5rem #4c2600 ;
+    margin-top: 10rem;
+}
+
+
 @media screen and (max-width: 900px)
 {
     .menu_burger
