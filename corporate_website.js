@@ -16,7 +16,7 @@ function reduce_container()
     let menu_button= document.querySelector(".menu_button");
     
 
-    container.style.height = "30vh";
+    container.style.height = "25vh";
     container.style.transition= "height 2000ms";
     container.style.position ="relative";
     logo_position.style.marginTop = "4vh";
@@ -37,12 +37,9 @@ function reduce_container()
         menu_ele.style.flexDirection="column";
         menu_ele.style.fontSize="12px";
         menu_button.style.display= "none";
-       
-
     })
     burger.addEventListener("mouseleave", ()=>
     {
-       
         menu_ele.style.display="none";
         menu_ele.style.flexDirection="row";
         menu_button.style.display="block";
@@ -52,7 +49,7 @@ function reduce_container()
 
 function translate_title()
 {
-    title.style.marginLeft = "10rem";
+    title.style.marginLeft = "5rem";
     title.style.transition= "all 1000ms";
 }
 function back_title()
@@ -67,28 +64,28 @@ function get_sentence()
     let video_expression = document.querySelector('.video_expression');
     let video_lorem = document.querySelector('.video_lorem');
     let btn_consultation = document.querySelector(".button_consultation");
-
+    let scroll_icon = document.querySelector(".scroll_icon");
     menu.style.display="flex";
     expression.style.display = "block";
-   
     setTimeout(()=>{
     video_expression.style.display="block";
+    scroll_icon.style.display ="block";
+    video_expression.style.opacity= "1";
     video_expression.style.transform = "translateY(10rem)";
-    video_expression.style.transition= "transform 800ms";}, 500);
+    video_expression.style.transition= "transform 800ms";}, 1500);
+
     video_lorem.style.display="block";
     play.style.display="block";
     setTimeout(()=>{
     btn_consultation.style.display="block";
-    btn_consultation.style.transform="translateY(-15rem)";
+    btn_consultation.style.transform="translateY(-8rem)";
     btn_consultation.style.transition="transform 800ms";
+    btn_consultation.style.opacity = "1";
     },700 );
     setTimeout(()=>{video_lorem.style.transform = "translateY(-13rem)";
     video_lorem.style.transition= "transform 800ms";}, 500);
 }
-function get_input()
-{
-    let element = document.querySelectorAll(".menu_element_a");
-}
+
 setTimeout(translate_title, 400);
 setTimeout(reduce_container, 2000);
 setTimeout(back_title, 2000);
@@ -104,7 +101,6 @@ button_video.addEventListener("click", ()=>
     }
     else
     {video.pause();}
-    
 }
 )
 
